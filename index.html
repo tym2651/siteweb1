@@ -1,112 +1,300 @@
+/* --- STYLE GLOBAL --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f2f2f2;
+    color: #333;
+}
+
+/* Couleurs 132e RIC */
+:root {
+    --bleu: #002F5D;
+    --rouge: #C8102E;
+    --or: #D1A100;
+}
+
+/* --- HEADER --- */
+header {
+    background: var(--bleu);
+    color: white;
+    text-align: center;
+    padding: 60px;
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header img {
+    width: 150px;
+    animation: pop 1s ease-in-out;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-40px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* --- NAVIGATION --- */
+nav {
+    background: var(--rouge);
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: var(--or);
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* --- CONTENEUR --- */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    animation: slideIn 1s ease-in-out;
+}
+
+/* --- TITRES --- */
+h2 {
+    color: var(--bleu);
+    border-left: 6px solid var(--rouge);
+    padding-left: 10px;
+}
+
+/* --- IMAGE LARGE --- */
+.image-block {
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* --- FOOTER --- */
+footer {
+    background: var(--bleu);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+🏠 PAGE D’ACCUEIL – index.html
+html
+Copier le code
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L'Armée – Présentation</title>
+    <title>132e Régiment – Accueil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f2f2f2;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
+<body>
 
-        header {
-            background: #1a2a43;
-            color: white;
-            padding: 30px;
-            text-align: center;
-        }
+<header style="background-image:url('https://images.unsplash.com/photo-1593333725241-3f8b80b9dcd5');">
+    <!-- À remplacer par le vrai blason -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/French_Army_insignia_generic.svg/512px-French_Army_insignia_generic.svg.png" alt="Blason du 132e">
+    <h1>132e Régiment d’Infanterie Cynotechnique</h1>
+    <p>Courage • Discipline • Engagement</p>
+</header>
 
-        nav {
-            background: #0f1a2b;
-            padding: 10px;
-            text-align: center;
-        }
+<nav>
+    <a href="index.html">Accueil</a>
+    <a href="histoire.html">Histoire</a>
+    <a href="missions.html">Missions</a>
+    <a href="valeurs.html">Valeurs</a>
+    <a href="contact.html">Contact</a>
+    <a href="localisation.html">Localisation</a>
+</nav>
 
-        nav a {
-            color: #cdd7e0;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
+<div class="container">
+    <h2>Bienvenue sur le site du 132e RIC</h2>
 
-        nav a:hover {
-            color: white;
-        }
+    <div class="image-block" style="background-image:url('https://images.unsplash.com/photo-1526481280691-3bfa7568e8f5');"></div>
 
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
+    <p>
+        Le 132e Régiment d’Infanterie Cynotechnique est une unité d’élite de l’Armée française spécialisée
+        dans l’emploi opérationnel des chiens militaires. Situé à Suippes (Marne), il intervient sur 
+        les théâtres d’opérations nationaux et internationaux.
+    </p>
+</div>
 
-        h2 {
-            color: #1a2a43;
-        }
+<div class="container">
+    <h2>Localisation du régiment</h2>
+    
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2648.6560035512994!2d4.533!3d49.122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47eb2b310b38bcd3%3A0x991e0ee67929c5d0!2sCamp%20de%20Suippes!5e0!3m2!1sfr!2sfr!4v0000000000"
+        width="100%" height="350" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy">
+    </iframe>
+</div>
 
-        footer {
-            margin-top: 40px;
-            text-align: center;
-            padding: 20px;
-            background: #1a2a43;
-            color: white;
-        }
-    </style>
+<footer>
+    © 2025 – 132e RIC | Page d’accueil
+</footer>
+
+</body>
+</html>
+📜 PAGE HISTOIRE – histoire.html
+html
+Copier le code
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histoire – 132e RIC</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <h1>L'Armée – Histoire, Missions et Rôle</h1>
-    <p>Un site simple hébergé sur GitHub Pages</p>
+    <h1>Histoire du 132e Régiment</h1>
 </header>
 
 <nav>
-    <a href="#histoire">Histoire</a>
-    <a href="#missions">Missions</a>
-    <a href="#valeurs">Valeurs</a>
+    <a href="index.html">Accueil</a>
+    <a href="histoire.html">Histoire</a>
+    <a href="missions.html">Missions</a>
+    <a href="valeurs.html">Valeurs</a>
+    <a href="contact.html">Contact</a>
+    <a href="localisation.html">Localisation</a>
 </nav>
 
 <div class="container">
 
-    <section id="histoire">
-        <h2>Histoire</h2>
-        <p>
-            L’armée existe depuis les premières civilisations humaines. Au fil des siècles, 
-            elle a évolué pour devenir un ensemble organisé de forces terrestres, navales et aériennes, 
-            chargé de protéger les populations et les territoires.
-        </p>
-    </section>
+    <h2>Origines</h2>
 
-    <section id="missions">
-        <h2>Missions principales</h2>
-        <ul>
-            <li>Protéger le territoire national</li>
-            <li>Participer aux opérations internationales</li>
-            <li>Assurer la sécurité de la population</li>
-            <li>Contribuer aux missions humanitaires</li>
-        </ul>
-    </section>
+    <p>
+        Le 132e Régiment d’Infanterie Cynotechnique est l’héritier d'unités historiques ayant servi dans 
+        les grands conflits contemporains. Aujourd’hui, il est l’unique régiment cynotechnique de France.
+    </p>
 
-    <section id="valeurs">
-        <h2>Valeurs fondamentales</h2>
-        <p>
-            L’armée repose sur des valeurs fortes telles que le courage, la discipline, 
-            la solidarité et l’engagement au service de la nation.
-        </p>
-    </section>
+    <h2>Évolution moderne</h2>
+
+    <p>
+        Avec l’apparition de menaces nouvelles (IED, terrorisme, guérilla urbaine), le rôle des équipes 
+        cynophiles est devenu essentiel. Le 132e RIC est au cœur de cette transformation.
+    </p>
 
 </div>
 
 <footer>
-    © 2025 – Site sur l'Armée | Hébergé sur GitHub Pages
+    © 2025 – 132e RIC | Histoire
+</footer>
+
+</body>
+</html>
+⭐ PAGE VALEURS – valeurs.html
+html
+Copier le code
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valeurs – 132e RIC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Valeurs du 132e RIC</h1>
+</header>
+
+<nav>
+    <a href="index.html">Accueil</a>
+    <a href="histoire.html">Histoire</a>
+    <a href="missions.html">Missions</a>
+    <a href="valeurs.html">Valeurs</a>
+    <a href="contact.html">Contact</a>
+    <a href="localisation.html">Localisation</a>
+</nav>
+
+<div class="container">
+    <h2>Discipline et Engagement</h2>
+    <p>Le régiment repose sur une discipline de fer, essentielle pour les binômes maître-chien.</p>
+
+    <h2>Esprit de meute</h2>
+    <p>La confiance absolue entre le maître et son chien est la base de leur efficacité.</p>
+
+    <h2>Courage</h2>
+    <p>Les équipes opèrent souvent en première ligne dans des missions à haut risque.</p>
+</div>
+
+<footer>
+    © 2025 – 132e RIC | Valeurs
+</footer>
+
+</body>
+</html>
+🎯 PAGE MISSIONS – missions.html
+html
+Copier le code
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missions – 132e RIC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Missions du 132e RIC</h1>
+</header>
+
+<nav>
+    <a href="index.html">Accueil</a>
+    <a href="histoire.html">Histoire</a>
+    <a href="missions.html">Missions</a>
+    <a href="valeurs.html">Valeurs</a>
+    <a href="contact.html">Contact</a>
+    <a href="localisation.html">Localisation</a>
+</nav>
+
+<div class="container">
+    <h2>Détection d’explosifs</h2>
+    <p>Les chiens du 132e sont formés pour repérer IED, mines et charges improvisées.</p>
+
+    <h2>Recherche de personnes</h2>
+    <p>En zones urbaines, difficiles ou après catastrophe.</p>
+
+    <h2>Protection</h2>
+    <p>Appui direct aux unités combattantes.</p>
+
+    <h2>Opérations extérieures</h2>
+    <p>Mali, Sahel, Irak, Balkans…</p>
+</div>
+
+<footer>
+    © 2025 – 132e RIC | Missions
 </footer>
 
 </body>
