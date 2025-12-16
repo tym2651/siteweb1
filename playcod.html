@@ -1,177 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="fr">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Landing Page</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Les plus beaux lieux de France</title>
     <style>
-      * { font-family: 'Inter', system-ui, sans-serif; }
-      @keyframes float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-      }
-      .animate-float { animation: float 6s ease-in-out infinite; }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #0055a4, #ef4135);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        section {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        h2 {
+            color: #0055a4;
+            margin-top: 40px;
+        }
+        .lieu {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+        .lieu img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: #ccc;
+            margin-top: 60px;
+        }
     </style>
-  </head>
-  <body class="min-h-screen bg-slate-950 text-white antialiased">
-    
-    <!-- Background Effects -->
-    <div class="fixed inset-0 -z-10">
-      <div class="absolute top-0 left-1/4 w-96 h-96 bg-violet-500/20 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-fuchsia-500/20 rounded-full blur-3xl"></div>
-      <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
+</head>
+<body>
+
+<header>
+    <h1>Les plus beaux lieux de France</h1>
+    <p>Un voyage à travers les paysages les plus emblématiques et magnifiques de l’Hexagone</p>
+    <nav>
+        <a href="#paris">Paris</a>
+        <a href="#mont">Mont-Saint-Michel</a>
+        <a href="#verdon">Gorges du Verdon</a>
+        <a href="#azur">Côte d’Azur</a>
+        <a href="#loire">Châteaux de la Loire</a>
+        <a href="#calanques">Calanques</a>
+        <a href="#alpes">Alpes</a>
+    </nav>
+</header>
+
+<section>
+    <div class="lieu" id="paris">
+        <img src="https://images.unsplash.com/photo-1543340900-1bf4f8eced4c" alt="Tour Eiffel à Paris">
+        <h2>La Tour Eiffel – Paris</h2>
+        <p>Située au cœur de Paris, la Tour Eiffel est le monument le plus visité de France. Construite en 1889, elle symbolise le savoir-faire architectural français. Depuis ses étages, les visiteurs peuvent admirer une vue panoramique exceptionnelle sur la capitale, la Seine et ses monuments historiques.</p>
     </div>
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/50">
-      <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#" class="text-xl font-bold bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
-          Starter
-        </a>
-        <div class="hidden md:flex items-center gap-8">
-          <a href="#features" class="text-sm text-slate-400 hover:text-white transition-colors">Features</a>
-          <a href="#pricing" class="text-sm text-slate-400 hover:text-white transition-colors">Pricing</a>
-          <a href="#" class="text-sm text-slate-400 hover:text-white transition-colors">About</a>
-          <a href="#" class="px-4 py-2 bg-white text-slate-900 rounded-lg text-sm font-medium hover:bg-slate-100 transition-colors">
-            Get Started
-          </a>
-        </div>
-      </div>
-    </nav>
+    <div class="lieu" id="mont">
+        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="Mont-Saint-Michel">
+        <h2>Le Mont-Saint-Michel – Normandie</h2>
+        <p>Le Mont-Saint-Michel est un site unique classé au patrimoine mondial de l’UNESCO. Entouré par l’une des plus grandes marées d’Europe, il offre un spectacle naturel fascinant. Son abbaye médiévale attire chaque année des millions de visiteurs.</p>
+    </div>
 
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-6">
-      <div class="max-w-6xl mx-auto text-center">
-        <!-- Badge -->
-        <div class="inline-flex items-center gap-2 px-4 py-2 bg-violet-500/10 border border-violet-500/20 rounded-full text-violet-300 text-sm mb-8">
-          <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-          <span>New: Version 2.0 is here</span>
-        </div>
-        
-        <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
-          Build something
-          <span class="block bg-gradient-to-r from-violet-400 via-fuchsia-400 to-pink-400 bg-clip-text text-transparent">
-            beautiful today
-          </span>
-        </h1>
-        
-        <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-          The modern way to build web applications. Fast, flexible, and designed for developers who care about their craft.
-        </p>
-        
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-          <a href="#" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-xl font-semibold text-lg hover:opacity-90 transition-opacity shadow-lg shadow-violet-500/25">
-            Start Building →
-          </a>
-          <a href="#" class="w-full sm:w-auto px-8 py-4 bg-slate-800 border border-slate-700 rounded-xl font-semibold text-lg hover:bg-slate-700 transition-colors">
-            View Demo
-          </a>
-        </div>
-        
-        <p class="text-sm text-slate-500">No credit card required</p>
-      </div>
-    </section>
+    <div class="lieu" id="verdon">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Gorges du Verdon">
+        <h2>Les Gorges du Verdon – Provence</h2>
+        <p>Les Gorges du Verdon sont réputées pour leurs falaises vertigineuses et leurs eaux turquoise. C’est un lieu idéal pour les activités de plein air comme le kayak, l’escalade et la randonnée.</p>
+    </div>
 
-    <!-- Features Section -->
-    <section id="features" class="py-20 px-6">
-      <div class="max-w-6xl mx-auto">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">Everything you need</h2>
-          <p class="text-slate-400 max-w-xl mx-auto">Powerful features to help you build faster and ship with confidence.</p>
-        </div>
-        
-        <div class="grid md:grid-cols-3 gap-6">
-          <!-- Feature 1 -->
-          <div class="group p-8 rounded-2xl bg-slate-900/50 border border-slate-800/50 hover:border-violet-500/30 transition-all">
-            <div class="w-14 h-14 rounded-2xl bg-violet-500/10 flex items-center justify-center text-violet-400 mb-6 group-hover:bg-violet-500/20 transition-colors">
-              <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold mb-3">Lightning Fast</h3>
-            <p class="text-slate-400 leading-relaxed">Optimized for performance. Your apps load instantly and run smoothly.</p>
-          </div>
-          
-          <!-- Feature 2 -->
-          <div class="group p-8 rounded-2xl bg-slate-900/50 border border-slate-800/50 hover:border-violet-500/30 transition-all">
-            <div class="w-14 h-14 rounded-2xl bg-fuchsia-500/10 flex items-center justify-center text-fuchsia-400 mb-6 group-hover:bg-fuchsia-500/20 transition-colors">
-              <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.39m3.421 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold mb-3">Beautiful Design</h3>
-            <p class="text-slate-400 leading-relaxed">Crafted with care. Every pixel is intentional and purposeful.</p>
-          </div>
-          
-          <!-- Feature 3 -->
-          <div class="group p-8 rounded-2xl bg-slate-900/50 border border-slate-800/50 hover:border-violet-500/30 transition-all">
-            <div class="w-14 h-14 rounded-2xl bg-pink-500/10 flex items-center justify-center text-pink-400 mb-6 group-hover:bg-pink-500/20 transition-colors">
-              <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold mb-3">Secure by Default</h3>
-            <p class="text-slate-400 leading-relaxed">Enterprise-grade security. Your data is protected at every layer.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="lieu" id="azur">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Côte d’Azur">
+        <h2>La Côte d’Azur</h2>
+        <p>La Côte d’Azur est célèbre pour son climat ensoleillé, ses plages magnifiques et ses villes prestigieuses comme Nice, Monaco et Cannes. Elle représente le charme et l’élégance du sud de la France.</p>
+    </div>
 
-    <!-- Stats Section -->
-    <section class="py-16 px-6 border-y border-slate-800/50">
-      <div class="max-w-6xl mx-auto">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div>
-            <p class="text-4xl font-bold text-violet-400 mb-2">10K+</p>
-            <p class="text-slate-500">Developers</p>
-          </div>
-          <div>
-            <p class="text-4xl font-bold text-fuchsia-400 mb-2">50K+</p>
-            <p class="text-slate-500">Projects</p>
-          </div>
-          <div>
-            <p class="text-4xl font-bold text-pink-400 mb-2">99.9%</p>
-            <p class="text-slate-500">Uptime</p>
-          </div>
-          <div>
-            <p class="text-4xl font-bold text-amber-400 mb-2">4.9/5</p>
-            <p class="text-slate-500">Rating</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="lieu" id="loire">
+        <img src="https://images.unsplash.com/photo-1526481280690-9eadf1d2d1b5" alt="Châteaux de la Loire">
+        <h2>Les Châteaux de la Loire</h2>
+        <p>La vallée de la Loire regroupe de nombreux châteaux construits à la Renaissance. Ces monuments racontent l’histoire des rois de France et offrent des jardins spectaculaires.</p>
+    </div>
 
-    <!-- CTA Section -->
-    <section class="py-24 px-6">
-      <div class="max-w-4xl mx-auto">
-        <div class="p-12 rounded-3xl bg-gradient-to-r from-violet-500/10 via-fuchsia-500/10 to-pink-500/10 border border-violet-500/20 text-center">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to get started?</h2>
-          <p class="text-slate-400 mb-8 max-w-lg mx-auto">Join thousands of developers building the future of the web.</p>
-          <a href="#" class="inline-block px-8 py-4 bg-white text-slate-900 rounded-xl font-semibold text-lg hover:bg-slate-100 transition-colors">
-            Start Building Free →
-          </a>
-        </div>
-      </div>
-    </section>
+    <div class="lieu" id="calanques">
+        <img src="https://images.unsplash.com/photo-1565615833231-e8c91a38a012" alt="Calanques de Marseille">
+        <h2>Les Calanques – Marseille</h2>
+        <p>Les Calanques sont des criques naturelles aux eaux cristallines. Elles forment un parc national protégé, idéal pour les amoureux de la nature et de la mer.</p>
+    </div>
 
-    <!-- Footer -->
-    <footer class="py-12 px-6 border-t border-slate-800/50">
-      <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-        <span class="text-xl font-bold bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
-          Starter
-        </span>
-        <div class="flex items-center gap-8 text-sm text-slate-500">
-          <a href="#" class="hover:text-white transition-colors">Privacy</a>
-          <a href="#" class="hover:text-white transition-colors">Terms</a>
-          <a href="#" class="hover:text-white transition-colors">Contact</a>
-        </div>
-        <p class="text-sm text-slate-600">© 2024 All rights reserved.</p>
-      </div>
-    </footer>
-    
-  </body>
+    <div class="lieu" id="alpes">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Alpes françaises">
+        <h2>Les Alpes françaises</h2>
+        <p>Les Alpes françaises offrent des paysages montagneux impressionnants toute l’année. En hiver comme en été, elles attirent les amateurs de sports et de grands espaces.</p>
+    </div>
+</section>
+
+<section>
+    <h2>Carte interactive de la France</h2>
+    <p>Clique sur une région pour découvrir un lieu emblématique.</p>
+    <svg viewBox="0 0 500 500" style="width:100%; max-width:600px;">
+        <a href="paris.html"><rect x="220" y="80" width="60" height="60" fill="#0055a4" />
+            <title>Paris</title></a>
+        <a href="verdon.html"><rect x="260" y="300" width="70" height="60" fill="#4caf50" />
+            <title>Gorges du Verdon</title></a>
+        <a href="azur.html"><rect x="300" y="340" width="70" height="60" fill="#03a9f4" />
+            <title>Côte d’Azur</title></a>
+        <a href="mont.html"><rect x="220" y="40" width="70" height="40" fill="#9c27b0" />
+            <title>Mont-Saint-Michel</title></a>
+        <a href="loire.html"><rect x="180" y="160" width="90" height="50" fill="#ff9800" />
+            <title>Châteaux de la Loire</title></a>
+        <a href="calanques.html"><rect x="290" y="320" width="80" height="40" fill="#009688" />
+            <title>Calanques</title></a>
+        <a href="alpes.html"><rect x="330" y="260" width="80" height="60" fill="#607d8b" />
+            <title>Alpes</title></a>
+    </svg>
+</section>
+
+<footer>
+    <p>&copy; 2025 – Découvrir la France | Tous droits réservés</p>
+</footer>
+
+</body>
 </html>
+index.html
+paris.html
+mont.html
+verdon.html
+azur.html
+loire.html
+calanques.html
+alpes.html
