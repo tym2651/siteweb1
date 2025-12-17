@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Les plus beaux lieux de France</title>
+    <!-- Inspiré avec l’aide de https://gptonline.ai/ -->
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -18,6 +19,15 @@
             padding: 40px 20px;
             text-align: center;
         }
+        header nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
         section {
             max-width: 1000px;
             margin: 40px auto;
@@ -25,13 +35,13 @@
         }
         h2 {
             color: #0055a4;
-            margin-top: 40px;
+            margin-top: 20px;
         }
         .lieu {
             background-color: white;
             border-radius: 8px;
             padding: 20px;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
         }
         .lieu img {
@@ -41,7 +51,6 @@
             border-radius: 6px;
             margin-bottom: 15px;
         }
-        }
         footer {
             text-align: center;
             padding: 20px;
@@ -49,7 +58,23 @@
             color: #ccc;
             margin-top: 60px;
         }
-    </style>
+    html {
+    scroll-behavior: smooth;
+}
+
+svg a path,
+svg a circle {
+    transition: transform 0.3s ease, fill 0.3s ease;
+    transform-origin: center;
+}
+
+svg a:hover path,
+svg a:hover circle {
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+</style>
 </head>
 <body>
 
@@ -69,73 +94,77 @@
 
 <section>
     <div class="lieu" id="paris">
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.4a7vQJN56kOEhsmj8H7WhAHaJ4%3Fpid%3DApi&f=1&ipt=e1e752e6bb49b2c33fc76683420c5298169e57a1fafe39febcc2d929b53952ba&ipo=images"alt="Tour Eiffel à Paris">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.4a7vQJN56kOEhsmj8H7WhAHaJ4" alt="Tour Eiffel à Paris">
         <h2>La Tour Eiffel – Paris</h2>
-        <p>Située au cœur de Paris, la Tour Eiffel est le monument le plus visité de France.Construite par l’ingénieur Gustave Eiffel à l’occasion de l’Exposition universelle de 1889, la tour Eiffel se dresse au cœur de Paris, sur le Champ-de-Mars. Haute de plus de 330 mètres, elle fut, à son inauguration, la plus grande structure métallique du monde. D’abord critiquée par certains artistes et intellectuels, elle est devenue au fil du temps un véritable chef-d’œuvre de l’ingénierie et un symbole universel de la capitale française. Aujourd’hui, la tour Eiffel attire des millions de visiteurs chaque année, qui viennent admirer sa structure audacieuse, profiter de ses panoramas exceptionnels et célébrer l’élégance et le rayonnement culturel de la France.
+        <p>Située au cœur de Paris, la Tour Eiffel est le monument le plus visité de France. Construite par l’ingénieur Gustave Eiffel à l’occasion de l’Exposition universelle de 1889, elle s’élève à plus de 330 mètres. D’abord critiquée, elle est devenue un symbole universel de la capitale et de l’ingénierie française.</p>
     </div>
 
     <div class="lieu" id="mont">
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.f90XOMI6zyW81GFv_K9mGAHaHa%3Fcb%3Ducfimg2%26pid%3DApi%26ucfimg%3D1&f=1&ipt=555a95c9a81d641c14a9c5ab073fbeedd323497b4a7d65711c4ccc172400878a&ipo=images alt="Mont-Saint-Michel">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.f90XOMI6zyW81GFv_K9mGAHaHa" alt="Mont-Saint-Michel">
         <h2>Le Mont-Saint-Michel – Normandie</h2>
-        <p>Situé en Normandie, au cœur d’une vaste baie soumise à certaines des plus grandes marées d’Europe, le Mont-Saint-Michel est un site exceptionnel à la fois naturel et historique. Surmonté de son abbaye majestueuse, il fut dès le VIIIᵉ siècle un haut lieu de pèlerinage dédié à l’archange Saint Michel. Classé au patrimoine mondial de l’UNESCO, le Mont-Saint-Michel impressionne par son architecture médiévale, ses remparts, ses ruelles étroites et son harmonie unique entre la mer et la pierre. Véritable symbole de la spiritualité et du génie architectural français, il accueille chaque année des millions de visiteurs venus du monde entier.
+        <p>Situé en Normandie, le Mont-Saint-Michel est un site exceptionnel mêlant nature et histoire. Classé au patrimoine mondial de l’UNESCO, il est célèbre pour son abbaye, ses remparts et les grandes marées qui l’entourent.</p>
     </div>
 
     <div class="lieu" id="verdon">
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.qmkI7lub5qX9fuRejZdPvAHaE0%3Fcb%3Ducfimg2%26pid%3DApi%26ucfimg%3D1&f=1&ipt=456e16230b401f7e7c54e6d4413aad86cd375f198cba8ae131660fd7fd09ae8f&ipo=images alt="Gorges du Verdon">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.qmkI7lub5qX9fuRejZdPvAHaE0" alt="Gorges du Verdon">
         <h2>Les Gorges du Verdon – Provence</h2>
-        <p>Les Gorges du Verdon sont un canyon majestueux situé dans le sud-est de la France, entre les départements des Alpes-de-Haute-Provence et du Var. Creusées par la rivière Verdon, ces gorges offrent des parois rocheuses vertigineuses, parfois plus de 700 mètres de profondeur, qui s’étendent sur près de 25 kilomètres. Leur couleur émeraude unique attire des visiteurs du monde entier, qu’il s’agisse de randonneurs sur les sentiers panoramiques comme le Sentier Blanc-Martel, de kayakistes et plaisanciers sur le lac de Sainte-Croix, ou d’amateurs d’escalade cherchant à défier les falaises imposantes.
-
-Les Gorges du Verdon représentent un lieu où la nature spectaculaire et les activités de plein air se rencontrent, symbolisant la beauté sauvage et l’aventure à la française. C’est une destination idéale pour ceux qui souhaitent allier paysages grandioses, air pur et émotions fortes.
+        <p>Les Gorges du Verdon forment l’un des plus grands canyons d’Europe. Leurs falaises vertigineuses et leurs eaux turquoise en font un lieu privilégié pour la randonnée, le kayak et l’escalade.</p>
+    </div>
 
     <div class="lieu" id="azur">
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.3TWBNwjPoy6uHsm4nRH-ZwHaE8%3Fcb%3Ducfimg2%26pid%3DApi%26ucfimg%3D1&f=1&ipt=074b840fc9da43f819a8c79b89299513ccf224606f296274b223bca777a82893&ipo=images alt="Côte d’Azur">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.3TWBNwjPoy6uHsm4nRH-ZwHaE8" alt="Côte d’Azur">
         <h2>La Côte d’Azur</h2>
-        <p>Bordée par la mer Méditerranée, la Côte d’Azur s’étend de Menton à Cannes, en passant par des villes mondialement connues comme Nice, Monaco, Antibes ou Saint-Tropez. Réputée pour son climat ensoleillé, ses plages aux eaux turquoise et ses paysages mêlant mer et montagnes, elle attire depuis le XIXᵉ siècle artistes, écrivains et visiteurs du monde entier. La Côte d’Azur séduit également par son art de vivre, sa gastronomie, ses villages perchés et ses événements prestigieux comme le Festival de Cannes. Symbole de luxe, de détente et de culture, elle incarne l’élégance et le charme du sud de la France.
+        <p>De Menton à Cannes, la Côte d’Azur séduit par ses plages, son climat ensoleillé et son art de vivre. Elle incarne l’élégance et le charme du sud de la France.</p>
     </div>
 
     <div class="lieu" id="loire">
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.SvPyaFYihOhyJVmRlgyMwQHaE8%3Fcb%3Ducfimg2%26pid%3DApi%26ucfimg%3D1&f=1&ipt=4366309c27d14eda1abdaf13da1e00bfdee96bb7c0afbe4895557d126723d967&ipo=images" alt="Châteaux de la Loire">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.SvPyaFYihOhyJVmRlgyMwQHaE8" alt="Châteaux de la Loire">
         <h2>Les Châteaux de la Loire</h2>
-        <p>La vallée de la Loire regroupe de nombreux châteaux construits à la Renaissance. Ces monuments racontent l’histoire des rois de France et offrent des jardins spectaculaires.</p>
+        <p>Les châteaux de la Loire témoignent de la splendeur de la Renaissance française. Chambord, Chenonceau ou Amboise offrent un voyage unique à travers l’histoire et l’architecture.</p>
     </div>
 
     <div class="lieu" id="calanques">
-        <img src=https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.gQy9muZET5bofBY231rm5wHaE8%3Fcb%3Ducfimg2%26pid%3DApi%26ucfimg%3D1&f=1&ipt=f17106074444ffbca6d6fd08f076e6db18587f665764c85936d8893e26e5d57f&ipo=images alt="Calanques de Marseille">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.gQy9muZET5bofBY231rm5wHaE8" alt="Calanques de Marseille">
         <h2>Les Calanques – Marseille</h2>
-        <p>Les Calanques sont des criques naturelles aux eaux cristallines. Elles forment un parc national protégé, idéal pour les amoureux de la nature et de la mer.</p>
+        <p>Entre Marseille et Cassis, les calanques offrent un paysage spectaculaire de falaises blanches plongeant dans une mer turquoise, au cœur d’un parc national protégé.</p>
     </div>
 
     <div class="lieu" id="alpes">
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.vb35h75MJK1WmVkGVJMU2wHaEK%3Fcb%3Ducfimg2%26pid%3DApi%26ucfimg%3D1&f=1&ipt=339a53902567aa9e8f794ace59c8a171146dba27d7ef40ac5b9410de1d86e1fc&ipo=images" alt="Alpes françaises">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.vb35h75MJK1WmVkGVJMU2wHaEK" alt="Alpes françaises">
         <h2>Les Alpes françaises</h2>
-        <p>Les Alpes françaises offrent des paysages montagneux impressionnants toute l’année. En hiver comme en été, elles attirent les amateurs de sports et de grands espaces.</p>
+        <p>Les Alpes françaises abritent le mont Blanc et offrent des paysages grandioses. Été comme hiver, elles sont une destination majeure pour les amoureux de la nature et du sport.</p>
     </div>
 </section>
 
 <section>
     <h2>Carte interactive de la France</h2>
     <p>Clique sur une région pour découvrir un lieu emblématique.</p>
-    <svg viewBox="0 0 500 500" style="width:100%; max-width:600px;">
-        <a href="paris.html"><rect x="220" y="80" width="60" height="60" fill="#0055a4" />
-            <title>Paris</title></a>
-        <a href="verdon.html"><rect x="260" y="300" width="70" height="60" fill="#4caf50" />
-            <title>Gorges du Verdon</title></a>
-        <a href="azur.html"><rect x="300" y="340" width="70" height="60" fill="#03a9f4" />
-            <title>Côte d’Azur</title></a>
-        <a href="mont.html"><rect x="220" y="40" width="70" height="40" fill="#9c27b0" />
-            <title>Mont-Saint-Michel</title></a>
-        <a href="loire.html"><rect x="180" y="160" width="90" height="50" fill="#ff9800" />
-            <title>Châteaux de la Loire</title></a>
-        <a href="calanques.html"><rect x="290" y="320" width="80" height="40" fill="#009688" />
-            <title>Calanques</title></a>
-        <a href="alpes.html"><rect x="330" y="260" width="80" height="60" fill="#607d8b" />
-            <title>Alpes</title></a>
+    <svg viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" width="100%" height="420" xmlns="http://www.w3.org/2000/svg" style="max-width:700px; background:#eef2f5; border-radius:12px; margin-bottom:40px;">
+        <!-- Carte de France réaliste (contour officiel simplifié) -->
+        <g id="france-map" fill="#e3f2fd" stroke="#455a64" stroke-width="1.5">
+            <path d="M95 85 L135 60 L190 45 L245 55 L295 50 L340 75 L380 115 L400 170 L385 220 L410 260 L390 320 L345 360 L285 385 L230 380 L185 350 L150 310 L120 260 L105 210 L95 160 Z" />
+        </g>
+
+        <!-- Points interactifs (localisation réelle approximative) -->
+        <a href="#mont"><circle cx="170" cy="110" r="7" fill="#9c27b0" /><title>Mont-Saint-Michel</title></a>
+        <a href="#paris"><circle cx="240" cy="165" r="7" fill="#0055a4" /><title>Paris</title></a>
+        <a href="#loire"><circle cx="215" cy="205" r="7" fill="#ff9800" /><title>Châteaux de la Loire</title></a>
+        <a href="#alpes"><circle cx="330" cy="255" r="7" fill="#607d8b" /><title>Alpes</title></a>
+        <a href="#verdon"><circle cx="275" cy="300" r="7" fill="#4caf50" /><title>Gorges du Verdon</title></a>
+        <a href="#calanques"><circle cx="300" cy="320" r="7" fill="#009688" /><title>Calanques</title></a>
+        <a href="#azur"><circle cx="330" cy="320" r="7" fill="#03a9f4" /><title>Côte d’Azur</title></a>
+
+        <text x="20" y="30" font-size="14" fill="#333">Carte de France – fond géographique réaliste</text>
     </svg>
 </section>
 
 <footer>
-    <p>&copy; 2025 – Découvrir la France | Tous droits réservés</p>
+    <p>&copy; 2025 – Découvrir la France | Tous droits réservés<br>
+    Réalisé avec l’aide de https://gptonline.ai/</p>
 </footer>
 
 </body>
 </html>
+
+
+
